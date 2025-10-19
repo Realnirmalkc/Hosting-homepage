@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem; /* Reduced for less bulk */
     line-height: 1.1;
     text-shadow: 0 0 10px rgba(0, 255, 196, 0.5); /* Subtle glow */
 }
@@ -57,9 +57,9 @@ h1 span {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Reduced for less bulk */
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem; /* Reduced margin */
     position: relative;
     padding-bottom: 0.5rem;
 }
@@ -69,8 +69,8 @@ h2::after { /* Underline effect with gradient */
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    width: 70px; /* Reduced width */
+    height: 3px; /* Reduced height */
     background: linear-gradient(90deg, var(--accent-color-1), var(--secondary-color));
     border-radius: 2px;
 }
@@ -78,7 +78,7 @@ h2::after { /* Underline effect with gradient */
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0.9rem 1.8rem; /* Reduced padding */
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -88,6 +88,7 @@ h2::after { /* Underline effect with gradient */
     position: relative;
     overflow: hidden;
     z-index: 1;
+    font-size: 0.95rem; /* Slightly smaller font */
 }
 
 .btn-primary {
@@ -132,12 +133,12 @@ h2::after { /* Underline effect with gradient */
 }
 
 .btn-large {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 1.1rem 2.2rem; /* Slightly reduced */
+    font-size: 1rem; /* Slightly reduced */
 }
 
 .section {
-    padding: 80px 5%;
+    padding: 60px 4%; /* Reduced padding for less bulk */
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -187,21 +188,21 @@ h2::after { /* Underline effect with gradient */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem; /* Reduced padding */
 }
 
 .navbar-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* Slightly smaller */
     font-weight: 700;
     color: var(--text-light);
     letter-spacing: -0.5px;
 }
 .navbar-logo img {
-    height: 40px; /* Adjust logo size */
-    margin-right: 10px;
+    height: 35px; /* Adjusted logo size */
+    margin-right: 8px; /* Reduced margin */
     filter: drop-shadow(0 0 5px var(--secondary-color)); /* Subtle glow for logo */
 }
 .logo-text {
@@ -214,16 +215,18 @@ h2::after { /* Underline effect with gradient */
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on desktop if too many links */
 }
 
 .nav-link {
     color: var(--text-light);
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.8rem 1.2rem;
+    font-weight: 500; /* Slightly lighter weight for more links */
+    padding: 0.6rem 0.8rem; /* Significantly reduced padding for more links */
     transition: color 0.3s ease, transform 0.2s ease;
     position: relative;
     overflow: hidden;
+    font-size: 0.9rem; /* Smaller font for many links */
 }
 .nav-link::after { /* Underline effect on hover/active */
     content: '';
@@ -232,9 +235,9 @@ h2::after { /* Underline effect with gradient */
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     width: 80%;
-    height: 3px;
+    height: 2px; /* Thinner underline */
     background: var(--secondary-color);
-    border-radius: 2px;
+    border-radius: 1px;
     transition: transform 0.3s ease-out;
 }
 .nav-link:hover::after,
@@ -243,16 +246,16 @@ h2::after { /* Underline effect with gradient */
 }
 .nav-link:hover {
     color: var(--secondary-color);
-    transform: translateY(-2px);
+    transform: translateY(-1px); /* Subtle lift */
 }
 .nav-link.active {
     color: var(--secondary-color);
 }
 
 .nav-cta .btn {
-    margin-left: 20px;
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
+    margin-left: 15px; /* Reduced margin */
+    padding: 0.6rem 1.2rem; /* Adjusted padding */
+    font-size: 0.85rem; /* Smaller font */
 }
 
 /* Hamburger Menu (Mobile) */
@@ -260,8 +263,8 @@ h2::after { /* Underline effect with gradient */
     display: none; /* Hidden on desktop */
     flex-direction: column;
     justify-content: space-around;
-    width: 30px;
-    height: 25px;
+    width: 28px; /* Smaller */
+    height: 22px; /* Smaller */
     background: transparent;
     border: none;
     cursor: pointer;
@@ -270,7 +273,7 @@ h2::after { /* Underline effect with gradient */
 }
 .hamburger-menu .bar {
     width: 100%;
-    height: 3px;
+    height: 2px; /* Thinner bars */
     background-color: var(--secondary-color);
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
@@ -279,61 +282,74 @@ h2::after { /* Underline effect with gradient */
     opacity: 0;
 }
 .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg); /* Adjusted for thinner bars */
 }
 .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg); /* Adjusted for thinner bars */
 }
 
 /* Mobile Nav Links */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex;
+@media (max-width: 1024px) { /* Broader breakpoint for too many links on desktop */
+    .navbar {
+        padding: 0.8rem 1rem;
     }
     .nav-links {
         position: fixed;
         right: 0;
-        top: 0; /* Adjust if header height is fixed */
+        top: 0;
         height: 100vh;
         width: 70%;
-        max-width: 300px; /* Limit mobile menu width */
+        max-width: 280px; /* Slightly narrower mobile menu */
         background-color: var(--bg-dark);
         flex-direction: column;
         justify-content: center;
         transform: translateX(100%); /* Hidden by default */
         transition: transform 0.4s ease-in-out;
-        padding: 2rem;
+        padding: 2rem 1rem; /* Adjusted padding */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+        align-items: flex-start; /* Align mobile links left */
     }
     .nav-links.active {
         transform: translateX(0); /* Show menu */
     }
     .nav-links li {
-        margin: 1.5rem 0;
-        text-align: center;
+        margin: 0.8rem 0; /* Reduced margin */
+        text-align: left; /* Align text left */
         width: 100%;
     }
     .nav-link {
-        font-size: 1.3rem;
+        font-size: 1.1rem; /* Larger font for mobile */
         display: block;
-        padding: 0.5rem;
+        padding: 0.6rem 1rem;
         width: 100%;
     }
+    .nav-link::after {
+        left: 0;
+        transform: translateX(0) scaleX(0);
+        width: 40%; /* Shorter underline for mobile */
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        transform: translateX(0) scaleX(1);
+    }
     .nav-cta {
-        margin-top: 2rem;
+        margin-top: 1.5rem; /* Reduced margin */
         width: 100%;
     }
     .nav-cta .btn {
-        width: 100%;
-        margin-left: 0;
-        padding: 1rem;
-        font-size: 1rem;
+        width: 90%; /* Fit better in narrower menu */
+        margin: 0 auto; /* Center button */
+        padding: 0.9rem 1rem;
+        font-size: 0.9rem;
+    }
+    .hamburger-menu {
+        display: flex;
     }
     .navbar-logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem; /* Smaller logo text on mobile */
     }
     .navbar-logo img {
-        height: 35px;
+        height: 30px; /* Smaller logo img on mobile */
     }
 }
 
@@ -350,7 +366,7 @@ h2::after { /* Underline effect with gradient */
     color: var(--text-light);
     overflow: hidden;
     background: var(--gradient-hero); /* Fallback gradient */
-    padding-top: 80px; /* To prevent content from being hidden by fixed navbar */
+    padding-top: 60px; /* To prevent content from being hidden by fixed navbar */
 }
 
 .hero-animation-canvas {
@@ -366,53 +382,109 @@ h2::after { /* Underline effect with gradient */
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
-    padding: 0 20px;
+    max-width: 700px; /* Reduced max-width */
+    padding: 0 15px; /* Reduced padding */
 }
 .hero-content h1 {
-    font-size: 4.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.8rem; /* Further reduced */
+    margin-bottom: 1.2rem; /* Reduced margin */
     animation: fadeIn 1.5s ease-out forwards;
 }
 .hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.1rem; /* Reduced */
+    margin-bottom: 2rem; /* Reduced margin */
     animation: fadeIn 1.8s ease-out forwards 0.2s; /* Delayed fade in */
 }
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Reduced gap */
     animation: fadeIn 2s ease-out forwards 0.4s; /* Further delayed fade in */
 }
 
 @media (max-width: 992px) {
     .hero-content h1 {
-        font-size: 3.5rem;
-    }
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-}
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .hero-content p {
         font-size: 1rem;
     }
+}
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 0.95rem;
+    }
     .hero-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px; /* Further reduced gap */
     }
     .btn-large {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        padding: 1rem 2rem; /* Adjusted for mobile width */
+    }
+}
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .btn-large {
+        font-size: 0.95rem;
+        padding: 0.8rem 1.8rem;
     }
 }
 
+
 /* =======================
     3. Why Choose Us Section
+   ======================== */
+.why-choose-us {
+    background-color: var(--bg-medium);
+    padding-top: 80px; /* Reduced */
+    padding-bottom: 80px; /* Reduced */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width */
+    gap: 25px; /* Reduced gap */
+}
+
+.feature-item {
+    background-color: var(--bg-dark);
+    padding: 2rem; /* Reduced padding */
+    border-radius: 12px; /* Slightly smaller radius */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Thinner border */
+}
+.feature-item:hover {
+    transform: translateY(-8px); /* Reduced lift */
+    box-shadow: 0 8px 25px rgba(0, 255, 196, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.feature-icon {
+    font-size: 3rem; /* Reduced */
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem; /* Reduced margin */
+    animation: pulse 2s infinite ease-in-out;
+    display: inline-block;
+}
+.feature-icon i {
+    text-shadow: 0 0 12px rgba(0, 255, 196, 0.6); /* Reduced glow */
+}
+.feature-item h3 {
+    font-size: 1.5rem; /* Reduced */
+    color: var(--text-light);
+    margin-bottom: 0.6rem; /* Reduced margin
    ======================== */
 .why-choose-us {
     background-color: var(--bg-medium);
